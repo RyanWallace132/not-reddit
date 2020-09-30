@@ -7,7 +7,7 @@ import Post from '../Post/Post'
 class Dashboard extends Component{
 
     constructor(props){
-        super();
+        super(props);
         this.state = {
             posts:[],
             title: '',
@@ -48,6 +48,7 @@ class Dashboard extends Component{
     }
 
     handleClick = () => {
+        console.log('hit')
         const {userInput: content, title} = this.state
         axios.post(`/api/posts/${this.props.user.id}`, {content, title}).then(
             (res) => {
@@ -92,9 +93,10 @@ class Dashboard extends Component{
     }
 
     render(){
+        console.log(this.state.posts)
         const mapPosts = this.state.posts.map(e => {
             return(
-                <Post 
+                <Post
                 post={e}
                 key={e.id}
                 handleClick={this.handleClick}
@@ -106,12 +108,14 @@ class Dashboard extends Component{
         return(
             <div>
                 <div>
-                <input checked= {this.state.myPost} onChange={() => this.setState({myPosts: !this.state.myPosts}, this.getPosts)} type='checkbox'/>
+                {/* <input checked= {this.state.myPost} onChange={() => this.setState({myPosts: !this.state.myPosts}, this.getPosts)} type='checkbox'/> */}
                 </div>
                 <div>
-                    <input type='text' placeholder = 'Create New Post' name='userInput' onChange={ (e) => {this.handleInput(e)}} />
-                    <input type='text' placeholder= 'Title...' name='userInput' onChange={(e) => {this.handleInput(e)}} />
-                    <button onChange={() => {this.handleClick()}}>Create Post</button>
+                    <input type='text' placeholder= 'Title' name='userInput' onChange={(e) => {this.handleInput(e)}} />
+                    <input type='text' placeholder = 'Subject' name='userInput' onChange={ (e) => {this.handleInput(e)}} />
+                    <button onClick={() => {
+                        this.handleClick()
+                    }}>Create Post</button>
                 </div>
                 <div>
                     <section className='post-box'>{mapPosts}</section>
