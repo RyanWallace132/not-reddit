@@ -111,9 +111,9 @@ class Dashboard extends Component{
                 {/* <input checked= {this.state.myPost} onChange={() => this.setState({myPosts: !this.state.myPosts}, this.getPosts)} type='checkbox'/> */}
                 </div>
                 <div>
-                    <input type='text' placeholder= 'Title' name='userInput' onChange={(e) => {this.handleInput(e)}} />
-                    <input type='text' placeholder = 'Subject' name='userInput' onChange={ (e) => {this.handleInput(e)}} />
-                    <button onClick={() => {
+                    <input className='title' type='text' placeholder= 'Title' name='title' onChange={(e) => {this.handleInput(e)}} />
+                    <input className='subject' type='text' placeholder = 'Subject' name='userInput' onChange={ (e) => {this.handleInput(e)}} />
+                    <button className='create-button' onClick={() => {
                         this.handleClick()
                     }}>Create Post</button>
                 </div>

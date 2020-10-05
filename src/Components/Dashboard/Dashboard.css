@@ -1,0 +1,28 @@
+.title {
+    padding: 5px;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.subject{
+    padding: 5px;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.create-button {
+    display: flex;
+    
+    padding: .3rem;
+    background-color: #ffff;
+    border-radius: .5rem;
+    border: none;
+    
+}
+.create-button:hover{
+    cursor: pointer;
+    background-color: #77ee77;
+    transition:.5s;
+}

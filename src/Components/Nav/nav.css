@@ -1,0 +1,23 @@
+.home{
+    display: inline-block;
+    float: left;
+    margin-left: 105rem;
+    background-color:#77ee77 ;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.logout{
+    display: inline-block;
+    float: left;
+    margin-left: 0rem;
+    border: none;
+}
+
+.home, .logout :hover{
+    cursor: pointer;
+}
+.logout :hover{
+    cursor: pointer;
+}

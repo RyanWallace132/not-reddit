@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom'
 
 function App(props) {
   return (
-    <div className="App">
+    <div className="background">
       <header className="App-header">
       {props.location.pathname !== '/'? <Nav/> : null}
       {routes}

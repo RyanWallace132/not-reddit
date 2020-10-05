@@ -49,7 +49,7 @@ class Auth extends Component {
         return (
             <div className="auth-container">
                 <div>
-                    <h1 className="auth-not-reddit">Not Reddit</h1>
+                    <h1 className="auth-not-reddit">Random Internet Forum</h1>
                     <h2 className="username">Username:</h2>
                     <h2 className="password">Password:</h2>
                     <input className="username-box" placeholder="Enter Username" name="username" onChange={(e) => {this.handleInput(e)}} />
