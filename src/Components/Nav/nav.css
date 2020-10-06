@@ -1,8 +1,13 @@
+@import '../../reset.css';
+
+
+
+
 .home{
     display: inline-block;
     float: left;
     margin-left: 105rem;
-    background-color:#77ee77 ;
+    background-color:rgb(135, 234, 241) ;
     border: none;
     padding: 10px 20px;
     margin-top: 10px;
@@ -15,9 +20,10 @@
     border: none;
 }
 
-.home, .logout :hover{
+.home:hover{
     cursor: pointer;
+    background-color: #f2f2f2;
 }
-.logout :hover{
+.logout:hover{
     cursor: pointer;
 }
