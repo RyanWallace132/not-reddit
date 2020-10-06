@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {loginUser} from '../../ducks/reducer'
 import axios from 'axios'
+import './auth.css'
+
+
 
 
 
@@ -44,18 +47,20 @@ class Auth extends Component {
                 alert(err.message)
             })
     }
+    
 
     render(){
         return (
             <div className="auth-container">
                 <div>
-                    <h1 className="auth-not-reddit">Random Internet Forum</h1>
+                    <img className='logo' src='https://i.imgur.com/UzRCIoK.png'/>
+                    <h1 className="internet-forum">Internet Forum</h1>
                     <h2 className="username">Username:</h2>
                     <h2 className="password">Password:</h2>
-                    <input className="username-box" placeholder="Enter Username" name="username" onChange={(e) => {this.handleInput(e)}} />
-                    <input type="password" className="password-box" placeholder="Enter Password" name="password" onChange={(e) => {this.handleInput(e)}} />
-                    <button className="login-Button" onClick={() => this.handleLogin()} > Login </button>
-                    <button className="register-button" onClick={() => this.handleRegister()} > Register </button>
+                    <input className="usernamebox" placeholder="Enter Username" name="username" onChange={(e) => {this.handleInput(e)}} />
+                    <input type="password" className="passwordbox" placeholder="Enter Password" name="password" onChange={(e) => {this.handleInput(e)}} />
+                    <button className="loginButton" onClick={() => this.handleLogin()} > Login </button>
+                    <button className="registerButton" onClick={() => this.handleRegister()} > Register </button>
                 </div>
             </div>
         )
