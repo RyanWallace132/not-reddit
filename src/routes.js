@@ -4,6 +4,8 @@ import Auth from './Components/Auth/Auth'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Post from './Components/Post/Post'
 import Form from './Components/Form/Form'
+// import New from './Components/New/New'
+
 
 
 

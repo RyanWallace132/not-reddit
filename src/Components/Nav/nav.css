@@ -1,29 +1,64 @@
 @import '../../reset.css';
 
 
-
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 10%;
+    
+}
 
 .home{
-    display: inline-block;
-    float: left;
-    margin-left: 105rem;
-    background-color:rgb(135, 234, 241) ;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
+    background-color: #9e9d9b;
+    background-size: 50px;
+    border:none ;
+    padding: 8px;
+    color: #f2f2f2;
+    /* margin-left: 30px; */
+    cursor: pointer;
+    border-radius: 1px;
+    width: 10vh;
+    /* display: inline-block; */
+    /* left: 128vh; */
+    /* top: 1vh; */
+    border-radius: 2rem;
+    /* vertical-align: baseline; */
+    font-family: 'Space Mono', monospace;
 }
 
-.logout{
-    display: inline-block;
-    float: left;
-    margin-left: 0rem;
-    border: none;
+.logout {
+    background-color: #9e9d9b;
+    background-size: 50px;
+    border:none ;
+    padding: 8px;
+    color: #f2f2f2;
+    /* margin-left: 30px; */
+    cursor: pointer;
+    border-radius: 1px;
+    width: 10vh;
+    /* display: inline-block; */
+    /* left: 128vh; */
+    /* top: 1vh; */
+    border-radius: 2rem;
+    /* vertical-align: baseline; */
+    font-family: 'Space Mono', monospace;
 }
 
-.home:hover{
+.new-post{
+    background-color: #9e9d9b;
+    background-size: 50px;
+    border:none ;
+    padding: 8px;
+    color: #f2f2f2;
+    /* margin-left: 30px; */
     cursor: pointer;
-    background-color: #f2f2f2;
-}
-.logout:hover{
-    cursor: pointer;
+    border-radius: 1px;
+    width: 10vh;
+    /* display: inline-block; */
+    /* left: 128vh; */
+    /* top: 1vh; */
+    border-radius: 2rem;
+    /* vertical-align: baseline; */
+    font-family: 'Space Mono', monospace;
 }

@@ -31,7 +31,7 @@ class Auth extends Component {
                 this.props.history.push('/dashboard')
             })
             .catch((err) => {
-                alert(err.message)
+                alert('This User Already Exists ')
             })
     }
 
@@ -44,12 +44,13 @@ class Auth extends Component {
                 this.props.history.push('/dashboard')
             })
             .catch((err) => {
-                alert(err.message)
+                alert('Username or Password Is Incorrect')
             })
     }
     
 
     render(){
+        document.title="Internet Forum Login"
         return (
             <div>
                 <div className="authContainer">

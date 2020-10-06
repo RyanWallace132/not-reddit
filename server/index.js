@@ -42,16 +42,6 @@ app.put('/api/posts/:id', controller.editPost)
 
 
 
-
-
-
-
-
-
-
-
-
-
 massive ({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnauthorized: false},

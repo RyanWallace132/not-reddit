@@ -19,6 +19,7 @@ class Dashboard extends Component{
     }
     componentDidMount(){
         this.getPosts()
+        document.title = 'Dashboard'
     }
 
     getPosts = () => {
@@ -111,13 +112,15 @@ class Dashboard extends Component{
                 {/* <input checked= {this.state.myPost} onChange={() => this.setState({myPosts: !this.state.myPosts}, this.getPosts)} type='checkbox'/> */}
                 </div>
                 <div className='create'>
+                    <div className='createBoxes'>
                     <input className='title' type='text' placeholder= 'Title' name='title' onChange={(e) => {this.handleInput(e)}} />
                     <input className='subject' type='text' placeholder = 'Subject' name='userInput' onChange={ (e) => {this.handleInput(e)}} />
+                    </div>
                     <button className='create-button' onClick={() => {
                         this.handleClick()
                     }}>Create Post</button>
                 </div>
-                <div>
+                <div className='posts'>
                     <section className='post-box'>{mapPosts}</section>
                 </div>
             </div>
