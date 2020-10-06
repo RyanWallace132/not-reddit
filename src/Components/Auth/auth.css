@@ -1,31 +1,172 @@
 @import '../../reset.css';
 
+.authContainer{
+    display: flex;
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px auto;
+    position: relative;
+    top: 100px;
+    
+}
 
+.inputContainer{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    width: 67%;
+    
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 30%;
+}
 
 
 
 
 .internet-forum{
     display: flex;
-    justify-content: center;
-    margin-left: 0%;
-    /* margin-top: 5px; */
-    padding-top: 35px;
+    /* position: relative;
+    width: 100vh;
+    left: 40%;
+    margin-top: 5px;
+    padding-top: 35px; */
     font-size: 50px;
-    color: #ff9770;
+    color:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
     font-family: 'Bungee Inline', cursive;
     
 }
 
 
-.logo{
+.logoContainer{
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    
+}
+
+  
+
+.username{
+    font-size: 30px;
+    font-weight: 50;
+    /* display: flex; */
+     /* justify-content: center; */
+    /* position: relative; */
+    right: 10vh;
+    top: 8.5vh; 
+    font-family: 'Space Mono', monospace;
+}
+
+.usernamebox{
     align-items: center;
     display: flex;
     justify-content: center;
     position: relative;
-    left: 45%;
-    top: 5vh;
+    border: none;
+    padding: 7px;
+    width: 15vh;
+    border-radius: 1rem;
+    background-color: #cecece;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
+.usernamebox:hover{
+    width: 11%;
+}
+
+.usernamebox:focus{
+    width: 11%;
+}
+
+
+
+.password{
+    font-size: 30px;
+  font-weight: 50;
+  display: flex;
+  /* justify-content: center;
+  position: relative;
+  right: 10vh;
+  top: 10vh; */
+  font-family: 'Space Mono', monospace;
+}
+
+
+.passwordbox{
+    /* align-items: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* position: relative; */
+    /* margin-top: 20px; */
+    border: none;
+    /* left: 50%; */
+    padding: 7px;
+    width: 15vh;
+    border-radius: 1rem;
+    background-color: #cecece;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.passwordbox:hover{
+    width: 11%;
+}
+
+.passwordbox:focus{
+    width: 11%;
+}
+
+.loginButton{
+    /* position: relative; */
+    background-color: #9e9d9b;
+    background-size: 50px;
+    border:none ;
+    padding: 8px;
+    color: #f2f2f2;
+    /* margin-left: 30px; */
+    cursor: pointer;
+    border-radius: 1px;
+    width: 10vh;
+    /* display: inline-block; */
+    /* left: 128vh; */
+    /* top: 1vh; */
+    border-radius: 2rem;
+    /* vertical-align: baseline; */
+    font-family: 'Space Mono', monospace;
+}
+
+.loginButton:hover{
+    background-size: 5%;
+    transition: .3s;
+    background-image: radial-gradient(circle at 50% -46%, #403d39, #cecece);
+}
+
+.registerButton{
+    background-color: #9e9d9b;
+    background-size: 125px;
+    border:none ;
+    padding: 8px;
+    color: #f2f2f2;
+    cursor: pointer;
+    border-radius: 1px;
+    width: 10vh;
+    border-radius: 2rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.registerButton:hover{
+    background-size: 5%;
+    transition: .3s;
+    background-image: radial-gradient(circle at 50% -46%, #403d39, #cecece);
+}
+
+
+
 
 
 
@@ -92,124 +233,3 @@
     89.69% { -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
     100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
   }
-  
-  
-  
-  
-
-.username{
-    font-size: 30px;
-    font-weight: 50;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    right: 10vh;
-    top: 8.5vh;
-}
-
-.usernamebox{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 20px;
-    border: none;
-    left: 50%;
-    padding: 7px;
-    width: 15vh;
-    top: 10px;
-    border-radius: 1rem;
-    background-color: #e693ff;
-    /* font-family: ; */
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-.usernamebox:hover{
-    width: 11%;
-}
-
-.usernamebox:focus{
-    width: 11%;
-}
-
-
-
-.password{
-    font-size: 30px;
-  font-weight: 50;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  right: 10vh;
-  top: 10vh;
-}
-
-
-.passwordbox{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 20px;
-    border: none;
-    left: 50%;
-    padding: 7px;
-    width: 15vh;
-    border-radius: 1rem;
-    background-color: #e693ff;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-.passwordbox:hover{
-    width: 11%;
-}
-
-.passwordbox:focus{
-    width: 11%;
-}
-
-.loginButton{
-    position: relative;
-    background-image: radial-gradient(circle at 50% -46%, #f67e7e, #ffc982c4);
-    background-size: 50px;
-    border:none ;
-    padding: 8px;
-    color: #f2f2f2;
-    margin-left: 30px;
-    cursor: pointer;
-    border-radius: 1px;
-    width: 10vh;
-    display: inline-block;
-    left: 130.7vh;
-    top: 1vh;;
-    border-radius: 2rem;
-    vertical-align: baseline;
-}
-
-.loginButton:hover{
-    background-size: 5%;
-    transition: .3s;
-}
-
-.registerButton{
-    position: relative;
-    float: none;
-    background-image: radial-gradient(circle at 50% -46%, #f67e7e, #ffc982c4);
-    background-size: 125px;
-    border:none ;
-    padding: 8px;
-    color: #f2f2f2;
-    cursor: pointer;
-    border-radius: 1px;
-    width: 10vh;
-    left: 100vh;
-    top: 1vh;
-    border-radius: 2rem;
-    vertical-align: baseline;
-    display: inline-block;
-}
-
-.registerButton:hover{
-    background-size: 5%;
-    transition: .3s;
-}

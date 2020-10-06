@@ -8,6 +8,7 @@ function App(props) {
   return (
     <div className="background">
       <header className="App-header">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet"/> 
       <link rel='icon' href='https://i.imgur.com/UzRCIoK.png'></link>
       {props.location.pathname !== '/'? <Nav/> : null}

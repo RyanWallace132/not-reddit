@@ -6,8 +6,7 @@
 
 .background{
     position: relative;
-    background: linear-gradient(to bottom, rgba(96, 236, 241, 0.3) 60%, rgba(11, 255, 214, 0.7) 100%, #ffffff 100%);
-    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);    height: 100vh;
     width: 100%;
     background-size: cover;
 }

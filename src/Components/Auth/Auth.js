@@ -51,16 +51,24 @@ class Auth extends Component {
 
     render(){
         return (
-            <div className="auth-container">
-                <div>
-                    <img className='logo' src='https://i.imgur.com/UzRCIoK.png'/>
+            <div>
+                <div className="authContainer">
+                    <div className='logoContainer'>
+                     <img className='logo' src='https://i.imgur.com/UzRCIoK.png'/>
+                    </div>
                     <h1 className="internet-forum">Internet Forum</h1>
+                    <div className='inputContainer'>
                     <h2 className="username">Username:</h2>
+                    <input className="usernamebox" placeholder="" name="username" onChange={(e) => {this.handleInput(e)}} />
+                    </div>
+                    <div className='inputContainer'>
                     <h2 className="password">Password:</h2>
-                    <input className="usernamebox" placeholder="Enter Username" name="username" onChange={(e) => {this.handleInput(e)}} />
-                    <input type="password" className="passwordbox" placeholder="Enter Password" name="password" onChange={(e) => {this.handleInput(e)}} />
+                    <input type="password" className="passwordbox" placeholder="" name="password" onChange={(e) => {this.handleInput(e)}} />
+                    </div>
+                    <div className='buttonContainer'>
                     <button className="loginButton" onClick={() => this.handleLogin()} > Login </button>
                     <button className="registerButton" onClick={() => this.handleRegister()} > Register </button>
+                    </div>
                 </div>
             </div>
         )
