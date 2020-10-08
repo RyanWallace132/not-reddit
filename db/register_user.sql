@@ -1,3 +1,3 @@
-INSERT INTO users (username, password)
+INSERT INTO users (email, password)
 VALUES ($1, $2)
-returning id, username;
+returning id, email;

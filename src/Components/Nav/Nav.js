@@ -8,7 +8,7 @@ class Nav extends Component {
         return(
             <nav className='nav'>
                 {/* <img src = {this.props.user.profile_picture} alt='profile picture' /> */}
-                {this.props.username}
+                {this.props.email}
                 <Link to="/dashboard"> <button className='home' >Home</button> </Link>
                 {/* <Link to="/new"> <button className='new-post' >New Post</button> </Link> */}
                 <Link to="/"> <button className='logout' >Logout</button> </Link>

@@ -33,6 +33,7 @@ app.post('/api/posts/:id', controller.writePost)
 app.delete('/api/posts/:id', controller.deletePost)
 app.get('/api/post/:id', controller.getPostById)
 app.put('/api/posts/:id', controller.editPost)
+app.post('/api/email',controller.email)
 
 
 

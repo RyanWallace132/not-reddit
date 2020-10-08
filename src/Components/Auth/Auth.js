@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {loginUser} from '../../ducks/reducer'
 import axios from 'axios'
 import './auth.css'
+import Nodemailer from '../Nodemailer/Nodemailer'
 
 
 
@@ -12,7 +13,7 @@ class Auth extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            username: '',
+            email: '',
             password: ''
         }
     }
@@ -24,11 +25,13 @@ class Auth extends Component {
     }
 
     handleRegister = () => {
-        const {username, password} = this.state
+        const {email, password} = this.state
         axios
-            .post('/api/auth/register', {username, password})
+            .post('/api/auth/register', {email, password})
             .then((res) => {
-                this.props.history.push('/dashboard')
+                axios.post('/api/email', { email, password }).then(res => {
+                    this.props.history.push('/dashboard')
+                  })
             })
             .catch((err) => {
                 alert('This User Already Exists ')
@@ -36,15 +39,15 @@ class Auth extends Component {
     }
 
     handleLogin = (e) => {
-        const {username, password} = this.state
+        const {email, password} = this.state
         axios
-            .post('/api/auth/login', {username, password})
+            .post('/api/auth/login', {email, password})
             .then((res) => {
                 this.props.loginUser(res.data)
                 this.props.history.push('/dashboard')
             })
             .catch((err) => {
-                alert('Username or Password Is Incorrect')
+                alert('Email or Password Is Incorrect')
             })
     }
 
@@ -61,8 +64,8 @@ class Auth extends Component {
                     </div>
                     <h1 className="internet-forum">Internet Forum</h1>
                     <div className='inputContainer'>
-                    <h2 className="username">Username:</h2>
-                    <input className="usernamebox" placeholder="" name="username" onChange={(e) => {this.handleInput(e)}} />
+                    <h2 className="username">Email:</h2>
+                    <input className="usernamebox" placeholder="" name="email" onChange={(e) => {this.handleInput(e)}} />
                     </div>
                     <div className='inputContainer'>
                     <h2 className="password">Password:</h2>

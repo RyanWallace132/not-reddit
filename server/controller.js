@@ -1,14 +1,65 @@
 const bcrypt = require('bcryptjs')
+const nodemailer = require('nodemailer')
+
+const {EMAIL, PASSWORD} = process.env
 
 
 
 module.exports = {
+  email: async (req, res) => {
+    const { name, message, email, title, image } = req.body
+
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: EMAIL,
+          pass: PASSWORD
+        }
+      });
+
+
+      const info = await transporter.sendMail({
+        from: `'${name}' <${email}>`,
+        to: EMAIL,
+        subject: title, 
+        text: message,
+        html: `<div>${message}<div> 
+              <img src="cid:unique@nodemailer.com"/>`,
+        attachments: [
+          { 
+            filename: 'license.txt',
+            path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
+          },
+          {
+            cid: 'unique@nodemailer.com',
+            path:image
+          }
+        ]
+      }, (err, res) => {
+        if (err) {
+          console.log('err', err)
+        } else {
+          console.log('res', res)
+          res.status(200).send(info)
+        }
+      })
+    } catch (err) {
+      console.log(err)
+      res.sendStatus(500)
+    }
+  },
+
+
+
+
+
     register: async (req, res) => {
         
         const db = req.app.get('db')
-        const { username, password } = req.body
+        const { email, password } = req.body
     
-        const [user] = await db.check_user([username])
+        const [user] = await db.check_user([email])
     
         if (user) {
           return res.status(409).send('user already exists')
@@ -17,7 +68,7 @@ module.exports = {
         const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
     
-        const [newUser] = await db.register_user([username, hash])
+        const [newUser] = await db.register_user([email, hash])
     
         req.session.user = newUser
     
@@ -27,9 +78,9 @@ module.exports = {
     login: async (req, res) => {
         const db = req.app.get('db')
         
-        const { username, password } = req.body
+        const { email, password } = req.body
         
-        const [existingUser] = await db.check_user([username])
+        const [existingUser] = await db.check_user([email])
         
         if (!existingUser) {
           return res.status(404).send('User not found')
