@@ -1,5 +1,6 @@
 require('dotenv').config()
 const controller = require('./controller')
+const path = require('path')
 const massive = require('massive')
 const express = require('express')
 const app = express()
@@ -32,6 +33,14 @@ app.post('/api/posts/:id', controller.writePost)
 app.delete('/api/posts/:id', controller.deletePost)
 app.get('/api/post/:id', controller.getPostById)
 app.put('/api/posts/:id', controller.editPost)
+
+
+
+app.use(express.static(__dirname + '/../build'))
+
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 
 

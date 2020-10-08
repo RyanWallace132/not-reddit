@@ -5,6 +5,7 @@
 
 
 .background{
+    max-height: 100vh;
     position: relative;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);    height: 100vh;
     width: 100%;

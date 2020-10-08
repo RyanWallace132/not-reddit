@@ -107,7 +107,7 @@ class Dashboard extends Component{
             )
         })
         return(
-            <div>
+            <div className='dashboard'>
                 <div>
                 {/* <input checked= {this.state.myPost} onChange={() => this.setState({myPosts: !this.state.myPosts}, this.getPosts)} type='checkbox'/> */}
                 </div>
@@ -120,9 +120,7 @@ class Dashboard extends Component{
                         this.handleClick()
                     }}>Create Post</button>
                 </div>
-                <div className='posts'>
                     <section className='post-box'>{mapPosts}</section>
-                </div>
             </div>
         )
     }

@@ -1,0 +1,50 @@
+.edit-delete-button{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 20%;
+}
+
+
+
+
+
+.post-title{
+    font-size: 20px;
+}
+
+.post-content{
+    font-size: 15px;
+}
+
+.edit-button{
+    margin: 10px;
+    background-color: #9e9d9b;
+    background-size: 20px;
+    border:none ;
+    padding: 3px;
+    color: #f2f2f2;
+    /* margin-left: 30px; */
+    cursor: pointer;
+    border-radius: 1px;
+    width: 5vw;
+    /* display: inline-block; */
+    /* left: 128vh; */
+    /* top: 1vh; */
+    /* border-radius: 2rem; */
+    /* vertical-align: baseline; */
+    font-family: 'Space Mono', monospace;
+}
+
+.delete-button{
+    margin: 10px;
+    background-color: #9e9d9b;
+    background-size: 10px;
+    border:none ;
+    padding: 2px;
+    color: #f2f2f2;
+    cursor: pointer;
+    border-radius: 1px;
+    width: 5vw;
+    font-family: 'Space Mono', monospace;
+}
