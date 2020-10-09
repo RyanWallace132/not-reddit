@@ -116,7 +116,7 @@ class Dashboard extends Component{
                     <input className='title' type='text' placeholder= 'Title' name='title' onChange={(e) => {this.handleInput(e)}} />
                     <input className='subject' type='text' placeholder = 'Subject' name='userInput' onChange={ (e) => {this.handleInput(e)}} />
                     </div>
-                    <button className='create-button' onClick={() => {
+                    <button className='create-post' onClick={() => {
                         this.handleClick()
                     }}>Create Post</button>
                 </div>

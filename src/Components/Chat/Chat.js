@@ -27,6 +27,7 @@ function App() {
   }
 
   const renderChat = () => {
+    document.title="Chat Room"
     return chat.map(({ name, message }, index) => (
       <div key={index}>
         <h3 className='chat-message'>
@@ -39,7 +40,7 @@ function App() {
   return (
     <div className="card">
       <form onSubmit={onMessageSubmit}>
-        <h1>Messanger</h1>
+        <h1></h1>
         <div className="name-field">
           <TextField
             name="name"
@@ -61,7 +62,7 @@ function App() {
         <button>Send Message</button>
       </form>
       <div className="render-chat">
-        <h1>Chat Log</h1>
+        <h1 className='chat-log'>Chat Log</h1>
         {renderChat()}
       </div>
     </div>

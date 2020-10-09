@@ -5,6 +5,7 @@
     min-height: 30rem;
   }
   form {
+    background-color: white;
     max-width: 350px;
     border-radius: 5px;
     padding: 20px;
@@ -23,14 +24,20 @@
   }
   
   .render-chat {
+    background-color: white;
     max-width: 350px;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
   }
+
+
+  .chat-log{
+    
+  }
   
   .chat-message {
-    color: #2f72da;
+    color: #2f6bda;
   }
   
   .chat-span {
