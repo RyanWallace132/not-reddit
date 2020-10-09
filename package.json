@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "proxy": "http://localhost:4500",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -23,7 +24,10 @@
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-promise-middleware": "^6.1.2"
+    "redux-promise-middleware": "^6.1.2",
+    "sass": "^1.27.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",

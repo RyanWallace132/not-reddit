@@ -10,6 +10,7 @@ class Nav extends Component {
                 {/* <img src = {this.props.user.profile_picture} alt='profile picture' /> */}
                 {this.props.email}
                 <Link to="/dashboard"> <button className='home' >Home</button> </Link>
+                <Link to="/chat"><button className="chat">Chat</button></Link>
                 {/* <Link to="/new"> <button className='new-post' >New Post</button> </Link> */}
                 <Link to="/"> <button className='logout' >Logout</button> </Link>
             </nav>
