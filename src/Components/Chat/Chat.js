@@ -62,7 +62,7 @@ function App() {
         <button>Send Message</button>
       </form>
       <div className="render-chat">
-        <h1 className='chat-log'>Chat Log</h1>
+        <h1 className='chat-log'>Chat Log:</h1>
         {renderChat()}
       </div>
     </div>
