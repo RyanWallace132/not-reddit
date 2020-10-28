@@ -6,7 +6,7 @@ import './chat.css'
 const socket = io.connect('http://localhost:4000')
 
 function App() {
-  const [state, setStaet] = useState({ message: '', name: '' })
+  const [state, setState] = useState({ message: '', name: '' })
   const [chat, setChat] = useState([])
 
   useEffect(() => {
